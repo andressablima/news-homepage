@@ -7,54 +7,71 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
+  <div class="container">
+    <header>
+      <div class="img-header">
+        <img src="./assets/images/logo.svg">
+      </div>
+      <div>
+        <button class="btn-header">Home</button>
+        <button class="btn-header">New</button>
+        <button class="btn-header">Popular</button>
+        <button class="btn-header">Trending</button>
+        <button class="btn-header">Categories</button> 
+      </div>
+    </header>
+    <section class="grid-container">
+      <div class="main-content">
+        <img src="./assets/images/image-web-3-desktop.jpg" class="main-image">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?</p>
+        <button class="btnmaintxt">Read More</button>
+      </div>
+      <div class="sidebar">
+        <h2>New</h2>
+        <div class="sidebar-content">
+          <h4>Hydrogen VS Electric Cars</h4>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="sidebar-content">
+          <h4>The Downsides of AI Artistry</h4>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <div class="sidebar-content">
+          <h4>Is VC Funding Drying Up?</h4>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </div>
+    </section>
+    <div class="bottombar">
+      <div class="bottombar-content">
+        <img src="./assets/images/image-retro-pcs.jpg">
+        <h2>01</h2>
+        <h3>Reviving Retro PCs</h3>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+      <div class="bottombar-content">
+        <img src="./assets/images/image-top-laptops.jpg">
+        <h2>02</h2>
+        <h3>Top 10 Laptops of 2022</h3>
+        <p>Our best picks for various needs and budgets.</p>
+      </div>
+      <div class="bottombar-content" >
+        <img src="./assets/images/image-gaming-growth.jpg">
+        <h2>03</h2>
+        <h3>The Growth of Gaming</h3>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </div>  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/andressablima/news-homepage">Andressa Lima</a>.
   </div>
 </body>
 </html>
