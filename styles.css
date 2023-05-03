@@ -1,5 +1,5 @@
 *{
-    margin: 5px;
+    margin: 0px 10px 10px 10px;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter';
@@ -13,7 +13,7 @@
 /* Header */
 header{
     width: 100%;
-    min-height: 80px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,10 +21,10 @@ header{
 }
 
 .btn-header{
-    color:hsl(233,8%,79%);
+    color:hsl(236, 13%, 42%);
     font-weight: 400;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     padding: 20px;
 }
 button{
@@ -41,9 +41,10 @@ button{
 /* Grid Container */
 .grid-container{
     flex:1 0 auto;
-    padding: 20px;
     display: grid;
+    justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 25vh);
     gap:15px;
     grid-template-areas: 
       "mainimage mainimage sidebar"
@@ -52,31 +53,69 @@ button{
       "h1content maintext sidebar"
     ;
 }
+
 .main-image{
     grid-area: mainimage;
-    width: 60vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("assets/images/image-web-3-desktop.jpg");
 }
+
+/* Main text-title*/
 
 h1{
     font-weight: 800;
-    font-size: 30px;
+    font-size: 45px;
     grid-area: h1content;
+    word-wrap: break-word;
+    letter-spacing: 4px;
+
 }
 
 .main-text{
     grid-area: maintext;
+    font-weight: 400;
+    font-size: 18px;
+    color:hsl(236, 13%, 42%);
+    line-height: 4.5vh;
 }
+
+.btnmaintxt button{
+    cursor: pointer;
+    font-weight: 700;
+    background-color:hsl(240,100%,5%);
+    color: hsl(36, 100%, 99%);
+    width: 10vw;
+    height: 6vh;
+}
+.btnmaintxt button:hover{
+    background-color: hsl(5, 85%, 63%);
+}
+.btnmaintxt{
+    padding-top: 5px;
+}
+
+/* Sidebar Content */
 .sidebar{
+    margin-left: 25px;
     grid-area: sidebar;
     background-color: hsl(240,100%,5%);
     padding: 10px;
-    width: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .sidebar h2{
     color: hsl(35, 77%, 62%);
     background-color: hsl(240,100%,5%);
-    text-align: center;
+    text-align: left;
+    letter-spacing: 4px;
+    padding-left: 15px;
+    font-weight: 700;
+    font-size: 32px;
 }
+
 .sidebar-content{
     padding: 8px;
     background-color: hsl(240,100%,5%);
@@ -89,39 +128,67 @@ h1{
 .sidebar-content h4{
     color:hsl(36, 100%, 99%);
     background-color: hsl(240,100%,5%);
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sidebar-content h4:hover{
+    color: hsl(35, 77%, 62%);
 }
 .sidebar-content p{
     background-color: hsl(240,100%,5%);
     color:hsl(233,8%,79%);
+    font-size: 15px;
 }
 
-button{
 
-}
-.btnmaintxt{
 
-}
-
+/* Bottombar Content */
 .bottombar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap; 
-    margin: 20px;
-    
+    gap: 8px;
+}
+.bottombar-content{
+    width: 330px;
+    height: 130px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 .bottombar-content h2{
     margin-left: 10px;
     padding-left: 10px;
-    
+    font-weight: 800;
+    color: hsl(233, 8%, 79%);
+}
+.bottombar-content h3{
+    font-size: 16px;
+    word-wrap:normal;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bottombar-content h3:hover{
+    color: hsl(5, 85%, 63%);
+}
+
+.bottombar-content p{
+    font-size: 14px;
+    font-weight: 400;
+    color:hsl(236, 13%, 42%);
 }
 
 .bottombar img{
-    width: 18vh;
+    width: 9vw;
+    height: 22vh;
     float: left;
-    border-radius: 5px;
+    border-radius: 3px;
 }
-
 
 /* Attribution part */
 .attribution { 

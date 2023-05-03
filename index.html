@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | News homepage</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./responsive.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,7 +18,7 @@
       <div class="img-header">
         <img src="./assets/images/logo.svg">
       </div>
-      <div>
+      <div class="headerbtn">
         <button class="btn-header">Home</button>
         <button class="btn-header">New</button>
         <button class="btn-header">Popular</button>
@@ -26,13 +27,16 @@
       </div>
     </header>
     <section class="grid-container">
-      <img src="./assets/images/image-web-3-desktop.jpg" class="main-image">
+      <div class="main-image"></div>
+      <!-- <img src="./assets/images/image-web-3-desktop.jpg" id="mainImage" class="main-image"> -->
       <h1 class="main-title">The Bright Future of Web 3.0?</h1>
       
       <div class="main-text">
         <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
           But is it really fulfilling its promise?</p>
-        <button class="btnmaintxt">Read More</button>
+          <div class="btnmaintxt">
+            <button>READ MORE</button>
+          </div>
       </div>
       <div class="sidebar">
         <h2>New</h2>

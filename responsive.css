@@ -1,0 +1,15 @@
+@media (max-width: 376px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-image{
+        background-image: url("assets/images/image-web-3-mobile.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .sidebar{
+        width: 75vw;
+    }
+}
