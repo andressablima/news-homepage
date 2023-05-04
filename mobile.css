@@ -1,0 +1,29 @@
+.hamburguer{
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: 1px solid transparent;
+    background-color: hsl(36, 100%, 99%);
+    cursor: pointer;
+}
+
+.closeIcon{
+    display: none;
+}
+
+#menu{
+    position: fixed;
+    transform: translateY(-70%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: hsl(36, 100%, 99%);
+    color: hsl(236, 13%, 42%);
+    list-style: none;
+    padding-top: 4rem;
+}

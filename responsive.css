@@ -5,11 +5,30 @@
         align-items: center;
     }
     .main-image{
-        background-image: url("assets/images/image-web-3-mobile.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
+        width: 0px;
+        height: 0px;
+    }
+    .main-image2{
+        width: 100%;
+        height: auto;
+        grid-area: mainimage;
     }
     .sidebar{
         width: 75vw;
+    }
+}
+
+@media (max-width: 1441px) {
+    .sidebar{
+        padding: 15px 10px 15px 10px;
+        width: 90%;
+        height: 70vh;
+    }
+    .sidebar-content{
+        padding: 15px 10px 15px 10px;
+        line-height: 3vh;
+    }
+    .sidebar-content h2{
+        font-size: 40px;
     }
 }

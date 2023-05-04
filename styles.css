@@ -40,42 +40,43 @@ button{
 
 /* Grid Container */
 .grid-container{
-    flex:1 0 auto;
     display: grid;
-    justify-content: space-between;
+    margin-left: 15px;
+    justify-content: space-evenly;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 25vh);
-    gap:15px;
+    grid-auto-rows: minmax(100px, auto) minmax(fit-content, auto) 0px;
+   /* grid-auto-rows: minmax(100px, auto); */
+    gap:25px;
     grid-template-areas: 
       "mainimage mainimage sidebar"
-      "mainimage mainimage sidebar"
-      "h1content maintext sidebar"
       "h1content maintext sidebar"
     ;
 }
 
 .main-image{
     grid-area: mainimage;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("assets/images/image-web-3-desktop.jpg");
+    width: 100%;
+    height:auto;
+}
+.main-image2{
+    width: 0px;
+    height: 0px;
 }
 
 /* Main text-title*/
 
 h1{
     font-weight: 800;
-    font-size: 45px;
+    font-size: 40px;
     grid-area: h1content;
     word-wrap: break-word;
     letter-spacing: 4px;
-
 }
 
 .main-text{
     grid-area: maintext;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     color:hsl(236, 13%, 42%);
     line-height: 4.5vh;
 }
@@ -86,7 +87,7 @@ h1{
     background-color:hsl(240,100%,5%);
     color: hsl(36, 100%, 99%);
     width: 10vw;
-    height: 6vh;
+    height: 7vh;
 }
 .btnmaintxt button:hover{
     background-color: hsl(5, 85%, 63%);
@@ -97,34 +98,32 @@ h1{
 
 /* Sidebar Content */
 .sidebar{
-    margin-left: 25px;
     grid-area: sidebar;
     background-color: hsl(240,100%,5%);
-    padding: 10px;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: 84vh;
+    align-content: center;
+    margin-left: 55px;
+
 }
-.sidebar h2{
+.sidebar-content h2{
+    padding-top: 3px;
     color: hsl(35, 77%, 62%);
     background-color: hsl(240,100%,5%);
     text-align: left;
     letter-spacing: 4px;
-    padding-left: 15px;
     font-weight: 700;
-    font-size: 32px;
 }
 
 .sidebar-content{
-    padding: 8px;
+    padding: 6px 8px 6px 8px;
     background-color: hsl(240,100%,5%);
-    gap: 8px;
- 
 }
+
 .sidebar hr{
     color:hsl(233,8%,79%);
 }
+
 .sidebar-content h4{
     color:hsl(36, 100%, 99%);
     background-color: hsl(240,100%,5%);
@@ -136,13 +135,11 @@ h1{
 .sidebar-content h4:hover{
     color: hsl(35, 77%, 62%);
 }
+
 .sidebar-content p{
     background-color: hsl(240,100%,5%);
     color:hsl(233,8%,79%);
-    font-size: 15px;
 }
-
-
 
 /* Bottombar Content */
 .bottombar{
@@ -152,6 +149,7 @@ h1{
     flex-wrap: wrap; 
     gap: 8px;
 }
+
 .bottombar-content{
     width: 330px;
     height: 130px;
@@ -159,12 +157,14 @@ h1{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 .bottombar-content h2{
     margin-left: 10px;
     padding-left: 10px;
     font-weight: 800;
     color: hsl(233, 8%, 79%);
 }
+
 .bottombar-content h3{
     font-size: 16px;
     word-wrap:normal;
@@ -196,6 +196,7 @@ h1{
     font-size: 11px; 
     text-align: center; 
 }
+
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
