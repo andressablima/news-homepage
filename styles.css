@@ -107,16 +107,19 @@ h1{
 
 }
 .sidebar-content h2{
-    padding-top: 3px;
+    padding-top: 8px;
+    margin-top: 5px;
     color: hsl(35, 77%, 62%);
     background-color: hsl(240,100%,5%);
     text-align: left;
     letter-spacing: 4px;
     font-weight: 700;
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar-content{
-    padding: 6px 8px 6px 8px;
+    padding: 4px 6px 8px 6px;
     background-color: hsl(240,100%,5%);
 }
 
@@ -125,6 +128,7 @@ h1{
 }
 
 .sidebar-content h4{
+    padding-top: 0;
     color:hsl(36, 100%, 99%);
     background-color: hsl(240,100%,5%);
     letter-spacing: 2px;
@@ -139,6 +143,7 @@ h1{
 .sidebar-content p{
     background-color: hsl(240,100%,5%);
     color:hsl(233,8%,79%);
+    font-size: 15px;
 }
 
 /* Bottombar Content */
