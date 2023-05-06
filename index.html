@@ -2,43 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->  
   <title>Frontend Mentor | News homepage</title>
-  <link rel="stylesheet" href="./mobile.css">
   <link rel="stylesheet" href="./styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="container">
+  <script src="main.js"></script>
+  <main class="container">
     <header>
-      <div class="img-header">
-        <img src="./assets/images/logo.svg">
-      </div>
-      <div class="headerbtn">
-        <button class="btn-header">Home</button>
-        <button class="btn-header">New</button>
-        <button class="btn-header">Popular</button>
-        <button class="btn-header">Trending</button>
-        <button class="btn-header">Categories</button> 
-      </div>
+      <nav class="navbar-desk">
+        <div class="img-header">
+          <img src="./assets/images/logo.svg">
+        </div>
+        <ul class="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">New</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Categories</a></li> 
+        </ul>
+      </nav>
+      <nav class="navbar-mob">
+        <div class="logo">
+          <img src="./assets/images/logo.svg">
+        </div>
+        <div class="hamb-icons">
+          <button onclick="animar()" id="icon-menu">
+            <img src="./assets/images/icon-menu.svg">
+          </button>
+          <button onclick="close()" id="close-menu">
+            <img src="./assets/images/icon-menu-close.svg">
+          </button>
+        </div>
+        <!--        <div class="icon-menu">
+          <img src="./assets/images/icon-menu.svg">
+        </div>
+        <div class="close-menu">
+          <img src="./assets/images/icon-menu-close.svg">
+        </div> -->
+      </nav>
     </header>
-    <section class="grid-container">
-      <div class="main-image"></div>
-      <img src="./assets/images/image-web-3-mobile.jpg" class="main-image2">
-      <img src="./assets/images/image-web-3-desktop.jpg" class="main-image">
-      <h1 class="main-title">The Bright Future of Web 3.0?</h1>
-      
-      <div class="main-text">
-        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-          But is it really fulfilling its promise?</p>
-          <div class="btnmaintxt">
-            <button>READ MORE</button>
-          </div>
+    <section class="text-container">
+      <div>
+        <picture>
+          <source media="(max-width: 760px)" srcset="./assets/images/image-web-3-mobile.jpg"/>
+          <img src="./assets/images/image-web-3-desktop.jpg" alt="web 3.0 img" />
+        </picture>
       </div>
+      <div class="txt-details">
+        <h1 class="main-title">The Bright Future of Web 3.0?</h1>
+        <div class="main-text">
+          <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+            But is it really fulfilling its promise?</p>
+            <div class="btnmaintxt">
+              <button>READ MORE</button>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <aside>
       <div class="sidebar">
         <div class="sidebar-content">
           <h2>New</h2>
@@ -47,44 +71,51 @@
           <h4>Hydrogen VS Electric Cars</h4>
           <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </div>
-        <hr>
+        <hr/>
         <div class="sidebar-content">
           <h4>The Downsides of AI Artistry</h4>
           <p>What are the possible adverse effects of on-demand AI image generation?</p>
         </div>
-        <hr>
+        <hr/>
         <div class="sidebar-content">
           <h4>Is VC Funding Drying Up?</h4>
           <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </div>
       </div>
-    </section>
-    <div class="bottombar">
-      <div class="bottombar-content">
-        <img src="./assets/images/image-retro-pcs.jpg">
-        <h2>01</h2>
-        <h3>Reviving Retro PCs</h3>
-        <p>What happens when old PCs are given modern upgrades?</p>
-      </div>
-      <div class="bottombar-content">
-        <img src="./assets/images/image-top-laptops.jpg">
-        <h2>02</h2>
-        <h3>Top 10 Laptops of 2022</h3>
-        <p>Our best picks for various needs and budgets.</p>
-      </div>
-      <div class="bottombar-content" >
-        <img src="./assets/images/image-gaming-growth.jpg">
-        <h2>03</h2>
-        <h3>The Growth of Gaming</h3>
-        <p>How the pandemic has sparked fresh opportunities.</p>
-      </div>
-    </div>
-  </div>  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/andressablima/news-homepage">Andressa Lima</a>.
-  </div>
-
-  <script type="scripts/javascript" src="main.js"></script>
+    </aside>  
+    
+    <footer>
+      <article>
+        <div>
+          <img src="./assets/images/image-retro-pcs.jpg" alt="Retro Pcs" />
+        </div>
+        <div>
+          <h2>01</h2>
+          <a href="#"><h3>Reviving Retro PCs</h3></a>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </article>
+      <article>
+        <div>
+          <img src="./assets/images/image-top-laptops.jpg" alt="Top laptops" />
+        </div>
+        <div>
+          <h2>02</h2>
+          <a href="#"><h3>Top 10 Laptops of 2022</h3></a>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </article>
+      <article>
+        <div>
+          <img src="./assets/images/image-gaming-growth.jpg" alt="Gaming growth"/>
+        </div>
+        <div>
+          <h2>03</h2>
+          <a href="#"><h3>The Growth of Gaming</h3></a>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </article>
+    </footer>
+  </main>  
 </body>
 </html>

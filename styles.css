@@ -1,285 +1,247 @@
 *{
-    margin: 0px 10px 10px 10px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter';
-    background-color: hsl(36, 100%, 99%);
+    font-size: 15px;
 }
-.container{
-    min-height: 100vh;
+body {
+    background-color:hsl(36, 100%, 99%) ;
     display: flex;
-    flex-direction: column;
-}
-/* Header */
-header{
+    justify-content: center;
     width: 100%;
-    min-height: 50px;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+    max-width: 1040px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(min-content, max-content);
+    grid-template-areas: "header header header" "txtc txtc aside" "txtc txtc aside" "footer footer footer";
+    gap: 25px;
+}
+/* Header - navbar */
+header {
+    grid-area: header;
+    margin-top: 50px;
+}
+
+.navbar-desk{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    margin-bottom: 1.25rem;
 }
 
-.btn-header{
-    color:hsl(236, 13%, 42%);
-    font-weight: 400;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 20px;
+.navbar-mob {
+    display:none;
+
 }
-button{
-    border:none;
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 60px;
+}
+
+li {
+    list-style: none;
+    padding: 15px;
+}
+
+a{
     text-decoration: none;
-    gap:20px;
-
-}
-.btn-header:hover{
-    color:hsl(35,77%,62%);
-    border: none;
+    color: hsl(236, 13%, 42%);
 }
 
-/* Grid Container */
-.grid-container{
+.menu a:hover{
+    color: hsl(5, 85%, 63%) ;
+}
+
+/* Main Text Section*/
+
+.text-container {
+    grid-area: txtc;
+}
+
+.txt-details {
     display: grid;
-    margin-left: 15px;
-    justify-content: space-evenly;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto) minmax(fit-content, auto) 0px;
-   /* grid-auto-rows: minmax(100px, auto); */
-    gap:25px;
-    grid-template-areas: 
-      "mainimage mainimage sidebar"
-      "h1content maintext sidebar"
-    ;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.main-image{
-    grid-area: mainimage;
-    width: 100%;
-    height:auto;
-}
-.main-image2{
-    width: 0px;
-    height: 0px;
-}
-
-/* Main text-title*/
-
-h1{
+.main-title{
+    margin-top: 30px;
+    font-size: 2.5rem;
     font-weight: 800;
-    font-size: 40px;
-    grid-area: h1content;
-    word-wrap: break-word;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 .main-text{
-    grid-area: maintext;
-    font-weight: 400;
-    font-size: 15px;
-    color:hsl(236, 13%, 42%);
-    line-height: 4.5vh;
+    margin-top: 30px;
+    line-height: 4vh;
 }
 
-.btnmaintxt button{
-    cursor: pointer;
-    font-weight: 700;
-    background-color:hsl(240,100%,5%);
-    color: hsl(36, 100%, 99%);
-    width: 10vw;
-    height: 7vh;
-}
-.btnmaintxt button:hover{
-    background-color: hsl(5, 85%, 63%);
-}
-.btnmaintxt{
-    padding-top: 5px;
+img, picture{
+    display: block;
+    width: 100%;
 }
 
-/* Sidebar Content */
-.sidebar{
-    grid-area: sidebar;
-    background-color: hsl(240,100%,5%);
-    width: 80%;
-    height: 84vh;
-    align-content: center;
-    margin-left: 55px;
-
+/* sidebar- aside section */
+aside{
+    grid-area: aside;
+    height: fit-content;
+    background-color:hsl(240, 100%, 5%);
+    width: 100%;
+    padding: 20px;
+    color: hsl(236, 13%, 42%);
 }
-.sidebar-content h2{
-    padding-top: 8px;
-    margin-top: 5px;
+
+aside h2{
     color: hsl(35, 77%, 62%);
-    background-color: hsl(240,100%,5%);
-    text-align: left;
-    letter-spacing: 4px;
-    font-weight: 700;
-    align-items: center;
-    justify-content: center;
+}
+
+aside h4{
+    color: hsl(36, 100%, 99%);
+    margin: 10px 0;
+}
+
+aside h4:hover{
+    color: hsl(35, 77%, 62%) ;
 }
 
 .sidebar-content{
-    padding: 4px 6px 8px 6px;
-    background-color: hsl(240,100%,5%);
+    margin: 20px 0;
 }
-
-.sidebar hr{
-    color:hsl(233,8%,79%);
-}
-
-.sidebar-content h4{
-    padding-top: 0;
-    color:hsl(36, 100%, 99%);
-    background-color: hsl(240,100%,5%);
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.sidebar-content h4:hover{
-    color: hsl(35, 77%, 62%);
-}
-
 .sidebar-content p{
-    background-color: hsl(240,100%,5%);
-    color:hsl(233,8%,79%);
-    font-size: 15px;
+    line-height: 1.7rem;
 }
 
-/* Bottombar Content */
-.bottombar{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap; 
-    gap: 8px;
+button{
+    background-color: hsl(5, 85%, 63%) ;
+    color:hsl(36, 100%, 99%);
+    padding: 15px 20px;
+    letter-spacing: 5px;
+    margin-top: 40px;
+    border: none;
 }
 
-.bottombar-content{
-    width: 330px;
-    height: 130px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.bottombar-content h2{
-    margin-left: 10px;
-    padding-left: 10px;
-    font-weight: 800;
-    color: hsl(233, 8%, 79%);
-}
-
-.bottombar-content h3{
-    font-size: 16px;
-    word-wrap:normal;
-    font-weight: 700;
+button:hover{
+    background-color:hsl(240, 100%, 5%) ;
     cursor: pointer;
-    transition: 0.5s;
 }
 
-.bottombar-content h3:hover{
-    color: hsl(5, 85%, 63%);
+hr{
+    margin: 30px 5px;
+    color:hsl(233, 8%, 79%);
 }
 
-.bottombar-content p{
-    font-size: 14px;
-    font-weight: 400;
-    color:hsl(236, 13%, 42%);
+/* Footer Section */
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    grid-area: footer;
 }
 
-.bottombar img{
-    width: 9vw;
-    height: 22vh;
-    float: left;
-    border-radius: 3px;
+footer article {
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap: 25px;
 }
 
-/* Attribution part */
-.attribution { 
-    padding-top: 20px;
-    font-size: 11px; 
-    text-align: center; 
+footer h2 {
+    color:hsl(233, 8%, 79%);
+    font-size: 2.5rem;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+footer a {
+    color:hsl(240, 100%, 5%);
 }
 
-@media (max-width:1441px) {
-    .sidebar{
-        height: 60vh;
+footer a:hover {
+    color:hsl(5, 85%, 63%);
+}
+
+footer h3 {
+    margin: 10px 0;
+    font-weight:800;
+}
+
+footer p {
+    line-height: 1.5rem;
+}
+
+footer img{
+    height: 30vh;
+    width: 10vw;
+}
+
+/* Responsive screens section */
+
+@media only screen and (max-device-width: 720px) {
+    .navbar-desk {
+        display:none;
     }
-    h1{
-        font-size: 50px;
-    }
-    .main-text{
-        font-size: 20px;
-    }
-    .btnmaintxt button{
-        width: 14vw;
-        height: 8vh;
-        font-size: 15px;
-    }
-}
-
-@media (max-width:1205px){
-    .sidebar{
-        height: 80vh;
-    }
-}
-
-@media (max-width: 1026px){
-    .bottombar-content{
-        width: 250px;
-        height: 130px;
-    }
-}
-
-
-@media (max-width: 770px){
-    .sidebar{
+    
+    header {
         width: 100%;
-        height: 100%;
-        margin-left: 10px;
+        margin-top: 20px;
     }
-    .main-text{
-        font-size: 17px;
+    .logo {
+        width: 20%;
     }
-    h1{
-        font-size: 35px;
-    }
-
-    .bottombar-content{
-        width: 220px;
-        height: 150px;
-    }
-    .btn-header{
-        font-size: 13px;
+    
+    .navbar-mob {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
     }
 
-}
-/*
-
-@media (max-width: 376px) {
-    .grid-container{
+    .container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        width: 90%;
+        max-width: 400px;
     }
-    .main-image{
-        width: 0px;
-        height: 0px;
+    .txt-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
     }
-    .main-image2{
-        width: 100%;
-        height: auto;
-        grid-area: mainimage;
+    .main_text {
+        margin-top: 0px;
     }
-    .sidebar{
-        width: 75vw;
+
+    button {
+        margin-top: 25px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+    
+    footer img{
+        width: 25vh;
+        justify-content: fit-content;
     }
 }
-
-
-*/
