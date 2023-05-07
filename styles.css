@@ -194,7 +194,6 @@ footer img{
     .navbar-desk {
         display:none;
     }
-    
     header {
         width: 100%;
         margin-top: 20px;
@@ -202,7 +201,6 @@ footer img{
     .logo {
         width: 20%;
     }
-    
     .navbar-mob {
         position: relative;
         display: flex;
@@ -210,7 +208,26 @@ footer img{
         justify-content: space-between;
         margin-bottom: 1.25rem;
     }
-
+    i#burguer{
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+    }
+    i#burguer:hover{
+        color: hsl(5, 85%, 63%);
+    }
+    menu{
+        display: block;     
+    }
+    menu > ul {
+        list-style-type: none;
+    }
+    menu > ul > li > a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        text-align: center;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -227,6 +244,7 @@ footer img{
     }
     .main_text {
         margin-top: 0px;
+        line-height: 5vh;
     }
 
     button {
