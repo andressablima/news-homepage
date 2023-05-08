@@ -222,11 +222,12 @@ footer img{
     menu > ul {
         list-style-type: none;
     }
+
     menu > ul > li > a {
         display: block;
         padding: 10px;
         text-decoration: none;
-        text-align: center;
+        text-align:center;
     }
     .container {
         display: flex;
@@ -242,9 +243,9 @@ footer img{
         justify-content: center;
         align-items: center; 
     }
-    .main_text {
+    .main_text p {
         margin-top: 0px;
-        line-height: 5vh;
+        line-height: 10vh;
     }
 
     button {
@@ -260,6 +261,6 @@ footer img{
     
     footer img{
         width: 25vh;
-        justify-content: fit-content;
+        align-items: center;
     }
 }
