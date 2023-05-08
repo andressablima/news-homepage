@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://andressablima.github.io/news-homepage/)
+- Live Site URL: [https://andressablima.github.io/news-homepage/](https://andressablima.github.io/news-homepage/)
 
 ## My process
 I first started by structuring HTML5 with div, articles, aside and footer. And then I started the CSS custom, add color, background, images and CSS grid (that was the most challenging part, because sometimes it wouldn't work and I had to start all over, but in the end was all right.
