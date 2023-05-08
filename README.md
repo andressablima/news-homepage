@@ -27,7 +27,8 @@ Users should be able to:
 ### Screenshot
 
 ![screenshot-desktop](https://user-images.githubusercontent.com/113699211/236684722-ba8ae530-07b6-4db6-8527-48b88544a15e.png)
-![Screenshot 2023-05-07 at 11-49-26 Frontend Mentor News homepage](https://user-images.githubusercontent.com/113699211/236684788-e1bde225-cacb-4638-9c64-e42b7e588178.png)
+![Screenshot-mob](https://user-images.githubusercontent.com/113699211/236710172-421a0694-cae1-4826-a6da-d157aebd3f06.png)
+
 
 ### Links
 
